@@ -1,0 +1,39 @@
+body {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+.card {
+    background-color: #2d2d2d;
+    border: 1px solid #444;
+}
+
+.card-title {
+    color: aliceblue;
+}
+
+.card-header {
+    background-color: #333;
+    border-bottom: 1px solid #444;
+}
+
+.console-output, .data-output, .hacking-output {
+    background-color: #000;
+    color: #0f0;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: monospace;
+    height: 300px;
+    overflow-y: auto;
+    white-space: pre-wrap;
+}
+
+.form-control {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #444;
+}
+
+.btn {
+    margin-right: 5px;
+}

@@ -1,0 +1,139 @@
+# Manual de Uso - Ethical Hacking Tool
+
+## Descripción
+Esta herramienta está diseñada para realizar pruebas de seguridad en redes y sistemas. Es modular y está escrita en Python, con una interfaz de terminal fácil de usar. Incluye funcionalidades como escaneo de puertos, escaneo de vulnerabilidades, fuerza bruta, sniffing de red, phishing Wi-Fi y más.
+
+## Advertencias Importantes
+1. **Uso Ético**: Esta herramienta debe usarse únicamente en entornos controlados y con el consentimiento explícito del propietario del sistema.
+2. **Legalidad**: El uso de esta herramienta en sistemas sin autorización es ilegal y puede resultar en consecuencias legales.
+3. **Sin Garantías**: Esta herramienta se proporciona "tal cual", sin garantías de ningún tipo. El autor no es responsable de ningún daño o problema que pueda surgir del uso del software.
+4. **Responsabilidad del Usuario**: El usuario es el único responsable de sus acciones y del uso que le dé a esta herramienta.
+
+## Funcionalidades Disponibles
+
+### 1. Escaneo de Puertos
+- **Descripción**: Escanea los puertos abiertos en un objetivo.
+- **Uso**: Selecciona la opción 1 en el menú e introduce la dirección IP o el hostname del objetivo.
+- **Ejemplo**:
+  ```
+  Introduce la dirección IP o el hostname: 192.168.1.1
+  Escaneando puertos 1-1024 en 192.168.1.1...
+  Puerto 22: Abierto (SSH)
+  Puerto 80: Abierto (HTTP)
+  ```
+
+### 2. Escaneo de Vulnerabilidades
+- **Descripción**: Busca vulnerabilidades conocidas en un objetivo.
+- **Uso**: Selecciona la opción 2 en el menú e introduce la dirección IP o el hostname del objetivo.
+- **Ejemplo**:
+  ```
+  Introduce la dirección IP o el hostname: 192.168.1.1
+  Escaneando vulnerabilidades en 192.168.1.1...
+  Vulnerabilidad encontrada: CVE-2021-34527 (PrintNightmare)
+  ```
+
+### 3. Fuerza Bruta (Password Cracker)
+- **Descripción**: Intenta adivinar contraseñas mediante fuerza bruta.
+- **Uso**: Selecciona la opción 3 en el menú e introduce la dirección IP, el nombre de usuario y la ruta al archivo de contraseñas.
+- **Ejemplo**:
+  ```
+  Introduce la dirección IP: 192.168.1.1
+  Introduce el nombre de usuario: admin
+  Introduce la ruta al archivo de contraseñas: passwords.txt
+  Probando contraseñas...
+  Contraseña encontrada: password123
+  ```
+
+### 4. Sniffer de Red
+- **Descripción**: Captura paquetes en una red.
+- **Uso**: Selecciona la opción 4 en el menú e introduce la interfaz de red.
+- **Ejemplo**:
+  ```
+  Introduce la interfaz de red: eth0
+  Capturando paquetes en eth0...
+  Paquete capturado: 192.168.1.1 -> 192.168.1.2 (HTTP)
+  ```
+
+### 5. Phishing Web
+- **Descripción**: Simula una página de phishing para pruebas.
+- **Uso**: Selecciona la opción 5 en el menú y sigue las instrucciones para desplegar la página.
+- **Ejemplo**:
+  ```
+  Usando plantilla: default
+  Servidor de phishing iniciado en http://localhost:8000
+  Credenciales capturadas: usuario=admin, contraseña=password123
+  ```
+
+### 6. Phishing Wi-Fi (solo Linux)
+- **Descripción**: Crea un punto de acceso Wi-Fi falso con una página de autenticación.
+- **Uso**: Selecciona la opción 6 en el menú, introduce el nombre del SSID y selecciona una plantilla.
+- **Ejemplo**:
+  ```
+  Introduce el nombre del SSID: Free_WiFi
+  Plantillas disponibles:
+  1. default
+  2. custom_template
+  Selecciona una plantilla (1-2): 1
+  Punto de acceso creado exitosamente.
+  Credenciales capturadas: usuario=admin, contraseña=password123
+  ```
+
+### 7. Escaneo Automático
+- **Descripción**: Automatiza el escaneo de puertos y vulnerabilidades.
+- **Uso**: Selecciona la opción 7 en el menú e introduce la dirección IP o el hostname del objetivo.
+- **Ejemplo**:
+  ```
+  Introduce la dirección IP o el hostname: 192.168.1.1
+  Escaneando puertos y vulnerabilidades en 192.168.1.1...
+  Puerto 22: Abierto (SSH)
+  Vulnerabilidad encontrada: CVE-2021-34527 (PrintNightmare)
+  ```
+
+### 8. Generar Reporte
+- **Descripción**: Genera un reporte con los resultados del escaneo.
+- **Uso**: Selecciona la opción 8 en el menú después de realizar un escaneo.
+- **Ejemplo**:
+  ```
+  Reporte generado en report.txt
+  ```
+
+### 9. Ver Manual
+- **Descripción**: Muestra este manual de uso.
+- **Uso**: Selecciona la opción 9 en el menú.
+
+### 10. Salir
+- **Descripción**: Cierra la aplicación.
+- **Uso**: Selecciona la opción 10 en el menú.
+
+## Instrucciones de Instalación
+### En Linux
+1. Instala Python 3.x:
+   ```bash
+   sudo apt update
+   sudo apt install python3
+   ```
+
+2. Instala las dependencias del sistema:
+   ```bash
+   sudo apt install hostapd dnsmasq nmap python3-pip
+   ```
+
+3. Instala las dependencias de Python:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+### En Windows
+1. Instala Python 3.x desde [python.org](https://www.python.org/).
+2. Instala las dependencias de Python:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+## Licencia
+Este proyecto está bajo la licencia MIT. Consulta el archivo `LICENSE` para más detalles.
+
+## Contacto
+Si tienes alguna pregunta o sugerencia, no dudes en contactarme:
+- Correo: [tu-correo@example.com](mailto:tu-correo@example.com)
+- GitHub: [tu-usuario](https://github.com/tu-usuario)

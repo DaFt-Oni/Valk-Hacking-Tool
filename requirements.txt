@@ -1,0 +1,9 @@
+colorama==0.4.4          # Para colores en la terminal
+scapy==2.4.5             # Para sniffing de red
+python-nmap==0.7.1       # Para escaneo de puertos y vulnerabilidades
+paramiko==2.11.0         # Para fuerza bruta SSH
+browser-cookie3==0.16.1  # Para extraer cookies de navegadores
+keyboard==0.13.5         # Para el keylogger
+requests==2.31.0         # Para enviar datos al servidor C&C
+pyinstaller==6.0.0       # Para compilar los scripts a ejecutables
+Flask==2.3.2             # Para el servidor C&C
