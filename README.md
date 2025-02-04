@@ -138,5 +138,5 @@ Si deseas contribuir a este proyecto, por favor sigue estos pasos:
 
 ## Contacto
 Si tienes alguna pregunta o sugerencia, no dudes en contactarme:
-- Correo: [tu-correo@example.com](mailto:tu-correo@example.com)
-- GitHub: [tu-usuario](https://github.com/tu-usuario)
+- Correo: [francoortizastudillo8@gmail.com](mailto:francoortizastudillo8@gmail.com)
+- GitHub: [DaFt-Oni](https://github.com/DaFt-Oni)

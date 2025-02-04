@@ -27,7 +27,8 @@ def main_menu():
     print(f"{Colors.OKGREEN}[9]. Executables4victims{Colors.ENDC}")
     print(f"{Colors.OKGREEN}[10]. Montar Servidor C&C{Colors.ENDC}")
     print(f"{Colors.OKGREEN}[11]. Ver Manual{Colors.ENDC}")
-    print(f"{Colors.OKGREEN}[12]. Salir{Colors.ENDC}")
+    print(f"{Colors.OKGREEN}[12]. Herramientas NFC{Colors.ENDC}")  # Nueva opción
+    print(f"{Colors.OKGREEN}[13]. Salir{Colors.ENDC}")  # Ajusta el número de salida
     choice = input(f"{Colors.BOLD}{Colors.WARNING}Selecciona una opción: {Colors.ENDC}")
     return choice
 
@@ -93,7 +94,25 @@ def main():
             with open("manual.txt", "r") as file:
                 print(file.read())
             input(f"{Colors.BOLD}{Colors.WARNING}Presiona Enter para continuar...{Colors.ENDC}")  # Pausa
-        elif choice == '12' or choice.lower() in ["exit", "quit"]:
+        elif choice == '12':  # Nueva opción: Herramientas NFC
+            from modules.NFC.menus_nfc import nfc_tools_menu
+            while True:
+                modo = nfc_tools_menu()
+                if modo == '1':
+                    from modules.NFC.nfc_pc import nfc_pc_tools
+                    nfc_pc_tools()
+                elif modo == '2':
+                    from modules.NFC.nfc_phone_pc import nfc_phone_pc_tools
+                    nfc_phone_pc_tools()
+                elif modo == '3':
+                    from modules.NFC.nfc_termux import nfc_termux_tools
+                    nfc_termux_tools()
+                elif modo == '4':
+                    break  # Volver al menú principal
+                else:
+                    print(f"{Colors.FAIL}Opción no válida. Inténtalo de nuevo.{Colors.ENDC}")
+                    input(f"{Colors.BOLD}{Colors.WARNING}Presiona Enter para continuar...{Colors.ENDC}")  # Pausa
+        elif choice == '13' or choice.lower() in ["exit", "quit"]:
             print(f"{Colors.FAIL}Saliendo...{Colors.ENDC}")
             break
         else:

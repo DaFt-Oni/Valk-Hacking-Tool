@@ -9,16 +9,20 @@ from utils.colors import Colors
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
 def clear_screen():
-    """Limpia la pantalla de la terminal de manera compatible con Windows, Git Bash, Linux y macOS."""
-    if os.name == 'nt':  # Windows
+    """
+    Limpia la pantalla de la terminal de manera compatible con cualquier entorno.
+    Funciona en Windows (cmd, PowerShell, Git Bash), Linux y macOS.
+    """
+    try:
+        # Intenta usar el comando 'clear' (funciona en Linux, macOS y Git Bash)
+        subprocess.run('clear', shell=True, check=True)
+    except:
         try:
-            # Intenta usar cls (funciona en cmd y PowerShell)
-            os.system('cls')
+            # Si falla, intenta usar 'cls' (funciona en cmd y PowerShell)
+            subprocess.run('cls', shell=True, check=True)
         except:
-            # Si falla, intenta usar clear (funciona en Git Bash)
-            subprocess.run('clear', shell=True)
-    else:  # Linux y macOS
-        os.system('clear')
+            # Si todo falla, imprime un mensaje de error
+            print(f"{Colors.FAIL}No se pudo limpiar la pantalla.{Colors.ENDC}")
     
 def supports_ansi():
     # Verificar si la terminal soporta ANSI

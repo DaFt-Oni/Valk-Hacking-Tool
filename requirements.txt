@@ -7,3 +7,5 @@ keyboard==0.13.5         # Para el keylogger
 requests==2.31.0         # Para enviar datos al servidor C&C
 pyinstaller==6.0.0       # Para compilar los scripts a ejecutables
 Flask==2.3.2             # Para el servidor C&C
+nfcpy==1.0.4             # Para interactuar con dispositivos NFC (PC y Termux)
+ndeflib==0.3.3           # Para manejar registros NDEF (formato de datos NFC)
