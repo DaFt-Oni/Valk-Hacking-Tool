@@ -16,7 +16,7 @@ def guardar_tag(tag_data, nombre_archivo):
     ruta_archivo = os.path.join(NFC_TAGS_DIR, f"{nombre_archivo}.json")
     with open(ruta_archivo, "w") as archivo:
         json.dump(tag_data, archivo, indent=4)
-    print(f"{Colors.OKGREEN}[+] Tag guardado en {ruta_archivo}{Colors.ENDC}")
+    print(f"{Colors.OKGREEN}[+] Tag guardado como '{nombre_archivo}' en {ruta_archivo}{Colors.ENDC}")
 
 def cargar_tag(nombre_archivo):
     """
